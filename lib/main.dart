@@ -8,13 +8,14 @@ import 'package:english_words/english_words.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Startup Name Generator',
+      title: '21800059 Kim Daeseok',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.blue.shade100,
           foregroundColor: Colors.black,
         )
       ),
@@ -55,9 +56,9 @@ class _RandomWordsState extends State<RandomWords> {
               _suggestions[index].asPascalCase,
               style: _biggerFont,
             ),
-            trailing: Icon(
-              alreadySaved ? Icons.favorite : Icons.favorite_border,
-              color: alreadySaved ? Colors.red : null,
+            leading: Icon(
+              alreadySaved ? Icons.star : Icons.star_border,
+              color: alreadySaved ? Colors.yellow : null,
               semanticLabel: alreadySaved ? 'Removed from saved' : 'Save',
             ),
             onTap: () {
